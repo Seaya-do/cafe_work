@@ -46,11 +46,18 @@ a{
 }
 
 /* ############HEADER############# */
+
+
+
 header{
     padding-top:10px;
 }
 .mainlogo>img{
    height:40px;
+}
+
+.sublogo>img{
+    height: 80%;
 }
 
 
@@ -146,3 +153,31 @@ a.all{
 }
 
 /* ############SECTION1########### */
+.logo{
+    font-family: 'Lobster', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: red;
+    font-size: 40px;
+    text-shadow: #ff5656;
+    padding-left: 20px;
+    border-left: 1px solid #cec9dd;
+}
+
+.nav>li{
+    margin-right: 30px;
+    font-size: 18px;
+    line-height: 1;
+}
+#searchform{
+    width: 20%;
+    
+}
+
+.nav>li:first-child a,
+.nav>li a:hover{
+    color: #ff5656;
+    font-weight: 600;
+}
+.nav>li.last a{
+    color:crimson ;
+}
