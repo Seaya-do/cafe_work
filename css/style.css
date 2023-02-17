@@ -170,7 +170,18 @@ a.all{
 }
 #searchform{
     width: 20%;
+    text-align: right;
     
+}
+.selectbox{
+    display: inline-block;
+    position: relative;
+}
+.serch-sbox{
+    position: absolute;
+    background: #cec9dd;
+    border: 1px solid #d0c7eb;
+    width: 120px;
 }
 
 .nav>li:first-child a,
