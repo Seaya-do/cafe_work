@@ -5,44 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOUM</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Tourney:wght@200&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
-    <script src="../jquery/jquery.min.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/cafe.js"></script>
 </head>
 <body>
-<header>
-    <!--header top -->
+    <header>
+        <!-- header top-->
     <div class="container d-flex justify-content-between">
-        <a href="#" class="mainlogo">
-            <img src="../images/logo.png" alt="#">
-        </a>
+        <a href="#" class="mainlogo"><img src="../images/logo.png" alt="#"></a>
         <ul class="top-nav d-flex list-style-none">
             <li><a href="#" class="loging">로그인</a></li>
-            <li><a href="mailto:"><i class="fa-solid fa-envelope"></i></a></li>
-            <li><a href="#" class="list"><span class="material-symbols-sharp">
-                grid_view
-                </span></a>
+            <li>
+                <a href="mailto:"><span class="material-symbols-sharp">
+                mail
+                </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="list">
+                <span class="material-symbols-sharp">
+                    grid_view
+                </span>
+                </a>
                 <div class="list-view">
-                        
-                <ul class="text-center icon-list list-style-none d-flex justify-content-between">
+                    <!-- 아이콘 4개-->
+                    <ul class="text-center icon-list list-style-none d-flex justify-content-between">
                         <li><a href="#">
-                            <img src="images/1t.png" alt="#">
-                            카페</a></li>
+                               <img src="images/1t.png" alt="#">
+                               카페    
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/2t.png" alt="#">
+                                커피    
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/3t.png" alt="#">
+                                회식     
+                            </a>
+                        </li>
                         <li><a href="#">
-                            <img src="images/2t.png" alt="#">
-                                커피</a></li>
-                        <li><a href="#"><img src="images/3t.png" alt="#">
-                                회식</a></li>
-                        <li><a href="#"><img src="images/4t.png" alt="#">
-                                채팅</a></li>
+                            <img src="images/4t.png" alt="#">
+                                채팅 
+                            </a>
+                        </li>
                     </ul>
+                    <!-- 네비게이션 아이콘당 한 줄씩-->
                     <ul class="map-list d-flex list-style-none">
                         <li>
                             <a href="#">블로그</a>
@@ -69,35 +85,61 @@
                             <a href="#">블로그</a>
                         </li>
                     </ul>
-                    <a href="#" class="all">전체보기</a>
+                    <a href="#" class="all text-center">전체보기</a>
                 </div>
             </li>
-         
         </ul> 
-       </div> 
-<!--/header top-->
-<!--header main-->
-<div class="main-header container d-flex align-item-center">
-    <a href="#" class="logo d-block ">coffee</a>
-    <ul class="nav list-style-none d-flex">
-        <li><a href="#">홈</a></li>
-        <li><a href="#">팬카페</a></li>
-        <li><a href="#">카페랭킹</a></li>
-        <li><a href="#">니카페</a></li>
-        <li class="last"><a href="#">온라인 교실</a></li>
-    </ul>
-    <form action="serchform">
-        <div class="selectbox">
+     </div>  
+     <!--/header top-->
 
-        </div>
-        <input type="text" name="serchtext" id="serchtext" placeholder="검색어를 입력하세요."/>
-        <button type="button" class="btn-none"></button>
-    </form>
+     <!-- header main-->
+     <div class="main-header container d-flex align-items-center">
+         <a href="#" class="logo d-block">coffee</a>
+         <ul class="nav list-style-none d-flex">
+             <li><a href="#">홈</li>
+             <li><a href="#">팬카페</a></li>   
+             <li><a href="#">카페랭킹</a></li> 
+             <li><a href="#">니카페</a></li>
+             <li class="last"><a href="#">온라인 교실</a></li> 
+         </ul>
+         <form id="searchform" method="get">
+            <div class="selectbox">
+               <a href="#" class="search-select">카페검색</a>
+               <i class="fa-solid fa-angle-down"></i>
+               <div class="search-sbox">
+                  <a href="#">카페검색</a>
+                  <a href="#">통합검색</a>
+                  <a href="#">카페이름</a>
+                  <a href="#">카페글</a>
+               </div>
+            </div>
+            <input type="hidden" name="selectbox" id="selectbox">
+            <input type="text" name="searchtext" id="searchtext" placeholder="검색어를 입력하세요."/>
+            <button type="submit" class="btn-none"><i class="fa-solid fa-magnifying-glass"></i></button>
+         </form>
 
-</div>
-
-<!--/header main-->
-
-</header>    
+     </div>    
+     <!-- /header main-->
+    </header>  
+    <!-- hero page -->
+    <section class="hero container">
+       <!-- loop -->
+        <h1>이야기 하나 <strong>닌텐도는 그때도 맞고 지금도 맞다</strong></h1>
+        <ul class="list-style-none">
+            <li><a href="#"><span class="list">동물의 숲 환불사유라는데</span> <span class="cafe-name">똥개의_숲</span></a></li>
+            <li><a href="#"><span class="list">지금와서 보니 닌텐도 스위치로 어떻게 이렇게 잘 뽑았나 싶은 게임</span> <span>똥개의_숲</span></a></li>
+            <li><a href="#"><span class="list">닌텐도스위치 스포츠 골프 플레이</span> <span>똥개의_숲</span></a></li>
+            <li><a href="#">
+                  <span class="list">의외로 닌텐도에서 매우 중요한 회사</span> 
+                  <span>I Love NBA</span>
+                </a>
+            </li>
+        </ul>
+       <!--/loop -->
+    </section>
+    <!-- best cafe 6 -->
+    <section class="best">
+        
+    </section>
 </body>
 </html>
