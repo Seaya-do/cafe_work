@@ -33,5 +33,33 @@ $(function(){
         $('.hero li').removeClass('active');
         $(this).addClass('active');
     });
+    //slide 실행
+    setInterval(mySlide, 10000);
+
+
   
   });  //jquery
+
+  function mySlide(){
+        //slide show
+        const eq0 = $('.hero .new:eq(0)');   //최초로 보이는 new
+        const eq1 = $('.hero .new:eq(1)');      //그 뒤에 숨어 있는 new
+
+        //animate를 통해 두 번재 new에 zindex를 추가하여 제일 앞에 보이게 하고 
+        //투명처리 한 후 점차 진하게 보이게 함
+        eq1.addClass('zindex').css('opacity',0).animate({
+            'opacity':1
+        },500, function(){
+            //animate 작업이 끝나면 이전에 보였던 new의 zindex를 지우고 가장 나중으로 바꿔줌
+            eq1.find('li').eq(ranDomList()).addClass('active');
+            eq0.removeClass('zindex');
+            eq0.find('li').removeClass('active');
+            $('.hero').append(eq0);
+        });
+    
+  }
+
+  function ranDomList(){
+    return Math.floor(Math.random() * 4);
+  }
+
