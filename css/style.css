@@ -218,7 +218,7 @@ a.all{
 .hero{
     padding-top: 50px;
     padding-bottom: 50px;
-    background: url(../images/cafe_back.png) no-repeat right 280px;
+    background: url(../images/cat.jpg) no-repeat right 280px;
     background-size:35%;
     position:relative;
     height:420px;
@@ -259,9 +259,9 @@ a.all{
 }
 .zindex{
     z-index:2;
-    animation-duration: 0.3s;
+    animation-duration: 500ms;
     animation-name: identifier;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-timing-function:ease-in-out;
 }
 
 span.prev,span.next{
@@ -285,11 +285,12 @@ span.prev i,span.next i{
     padding-bottom:50px;
     background-color:#efefef;
     border-top:4px solid #000;
+    border-bottom:1px solid #dedede;
 }
 
 @keyframes identifier {
     0%{
-       top: 100px;
+       top: 80px;
        opacity:0;
     }
     70%{
@@ -301,55 +302,276 @@ span.prev i,span.next i{
     }
 }
 
-/************************best .col-4***********************************/
+/******************************************************/
 .best .col-4>a{
-    display: block;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px 30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #efefef;
+    display:block;
+    background:#fff;
+    border-radius:5px;
+    padding:20px 30px;
+    margin-top:15px;
+    margin-bottom:15px;
+    border:1px solid #efefef;
     box-shadow: 0 1px 4px rgb(0 0 0 /3%);
-    transition: all 0.3ms;
-
+                            /* rgba(0,0,0,0.03) */
+    transition: all 0.3s;                        
 }
-
 .best .col-4>a:hover{
     box-shadow: 0 2px 12px 0 rgb(0 0 0 /20%),
-                0 1px 4px 0 rgb(0,0,0,.05);
+                0 1px 4px 0 rgba(0,0,0,.05);
 }
 div.img{
-    width: 80px;
-    height: 80px;
+    width:80px;
+    height:80px;
     background:url(/images/logos.png) no-repeat;
-    border-radius: 50%;
-    border: 1px solid #dedede;
-    float: left;
-    margin-right: 20px;
-    
+    border-radius:50%;
+    border:1px solid #dedede;
+    float:left;
+    margin-right:20px;
 }
-
 .best h1{
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    
+    font-size:20px;
+    margin:0;
+    padding:0;
 }
 .best p{
     margin: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top:5px;
+    padding-bottom:5px;
 }
-
 .hash span{
-    font-size: 14px;
-    margin-right: 10px;
-
+    font-size:14px;
+    margin-right:10px;
 }
 .hash span::before{
-    content: "#";
+    content:"#";
 }
 .hash span:first-child{
-    color: #ff5656;
+    color:#ff5656;
+}
+
+/************ cafe-list *************/
+.cafe-list{
+    padding-top:50px;
+}
+.cafe-list h1{
+    font-size:1.2em;
+    font-weight:700;
+}
+.clist{
+    list-style:none;
+    margin:0;
+    padding:0;
+    margin-top:40px;
+}
+.clist>li{
+    padding-top:15px;
+    padding-bottom:15px;
+    border-bottom:1px solid #dedede;
+}
+.tbox img, .tbox h1{
+    margin-right:20px;
+}
+.tbox p{
+    font-size:1.2em;
+    font-weight:300;
+}
+.cfe p:first-child{
+    width:100px;
+    margin-right:15px;
+}
+p.dg{
+    text-align:right;
+    font-weight:700;
+    color:#ff5656;
+}
+p.dg::before{
+    content:"댓글";
+    color:#333;
+    font-weight:400;
+    margin-right:8px;
+}
+.clist>li:hover{
+    background-color:#efefef;
+}
+.notice-list{
+    list-style-type:none;
+    padding:0;
+    font-size:14px;
+    font-weight:300;
+    margin-bottom:50px;
+}
+.notice-list li{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.notice-list li:first-child{
+    font-size:1.2em;
+    font-weight:400;
+}
+.niniz{
+    background-color:#4260aa;
+    height:200px;
+    position:relative;
+    overflow:hidden;
+}
+.face{
+    width:250px;
+    height:220px;
+    background:#fff;
+    border: 5px solid #000;
+    border-radius:50%;
+    position:absolute;
+    bottom:-70px;
+    right:-80px;
+}
+.eye{
+    position:absolute;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background-color:#000;
+    top:80px;
+}
+.leye{
+    right:140px;
+}
+.reye{
+    right:110px;
+}
+.nose{
+    width:50px;
+    height:45px;
+    border-radius:50%;
+    background-color:#a8e6ff;
+    position:absolute;
+    top:90px;
+    left:85px;
+    overflow:hidden;
+}
+.nostrils{
+    border:3px solid #000;
+    border-radius:50%;
+    width:40px;
+    height:38px;
+    left:-13px;
+    top:-12px;
+    display:inline-block;
+    position:absolute;
+}
+.rnostrils{
+   left:22px;
+}
+.niniz h1{
+    font-size:1.4em;
+    color:#fff;
+    font-weight:700;
+    margin-left:20px;
+    letter-spacing:-3px;
+}
+.page{
+    padding-top:40px;
+    padding-bottom:40px;
+    margin-bottom:40px;
+    letter-spacing:5px;
+}
+.page>span{
+    cursor:pointer;
+}
+.strong{
+    font-weight:700;
+}
+.lst::before{
+    content:"/";
+}
+/************* 팬카페 ************/
+.fancafe{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #efefef;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+.fa-book-skull{
+    color:#ff5656;
+    margin-right:5px;
+}
+.fancafe h1{
+    margin-bottom:20px;
+}
+.card{
+    border-radius:5px;
+    overflow:hidden;
+}
+.card-img{
+    position:relative;
+}
+.ctbox{
+    background:#000;
+    width:60px;
+    height:60px;
+    text-align:center;
+    color:#fff;
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:25px;
+    font-weight:300;
+    padding-top:5px;
+}
+.ctbox::after{
+    content:"";
+    width:8px;
+    height:2px;
+    background:rgba(255,255,255,0.8);
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:18px;
+}
+.card-img img{
+    width:110%;
+    height:230px;
+    object-fit:cover;
+    object-position: center;
+    display:block;
+}
+.card-body{
+    background-color:#fff;
+    padding:30px 25px;
+    display:flex;
+}
+.card-body img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit: cover;
+    margin-right:20px;
+}
+.card-body h1{
+    margin:0;
+    padding:0;
+    padding-bottom:3px;
+}
+.tbox{
+    font-size:14px;
+}
+.tbox span{
+    position:relative;
+    display:inline-block;
+    margin-right:5px;
+    padding-left:8px;
+}
+.tbox span::before{
+    content:"";
+    position:absolute;
+    display:block;
+    width:5px;
+    height:5px;
+    background:#8fabe7;
+    top:7px;
+    left:0px;
+}
+.card:hover{
+    box-shadow:0 0 8px 0 rgba(0,0,0,0.2),
+               0 0 25px 0 rgba(0,0,0,0.09);
 }
